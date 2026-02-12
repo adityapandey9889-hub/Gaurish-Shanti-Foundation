@@ -80,43 +80,7 @@
 </div>
 
 <script src="javascript/donate.js"></script>
-<script>
-    const amountButtons = document.querySelectorAll('.amount-btn');
-const customAmount = document.getElementById('customAmount');
-const form = document.getElementById('donationForm');
-const message = document.getElementById('donateMessage');
+<script src="javascript/script.js"></script>
 
-let selectedAmount = 0;
-
-amountButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    amountButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    selectedAmount = btn.textContent;
-    customAmount.value = '';
-  });
-});
-
-customAmount.addEventListener('input', () => {
-  amountButtons.forEach(b => b.classList.remove('active'));
-  selectedAmount = customAmount.value;
-});
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  if (!selectedAmount || selectedAmount <= 0) {
-    message.style.color = "red";
-    message.textContent = "Please select or enter a valid donation amount.";
-    return;
-  }
-
-  message.style.color = "green";
-  message.textContent = `Proceeding with ₹${selectedAmount} donation...`;
-
-  // Here backend/payment gateway integration will go
-});
-
-</script>
 </body>
 </html>
