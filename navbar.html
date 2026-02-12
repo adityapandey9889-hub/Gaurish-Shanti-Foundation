@@ -1,17 +1,33 @@
+<header class="navbar">
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <div class="nav-left">
-      <img src="images/logo.png" alt="Gaurish Shanti Foundation Logo" class="logo">
-      <span class="brand-name">Gaurish Shanti Foundation</span>
-    </div>
+  <div class="nav-left">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <span class="brand-name">Gaurish Shanti Foundation</span>
+  </div>
 
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="programs.html">Programs</a>
-      <a href="contact.html">Contact</a>
-      <a href="auth.html">Login/Signup</a>
-      <a href="donate.html" class="donate-btn">Donate</a>
-    </nav>
-  </header>
+  <!-- HAMBURGER -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+    <a href="auth.html">Login/Signup</a>
+    <a href="donate.html" class="donate-btn">Donate</a>
+  </nav>
+
+</header>
+
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
