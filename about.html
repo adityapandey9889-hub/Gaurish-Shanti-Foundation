@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Gaurish Shanti Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+
+  <div id="navbar-placeholder"></div>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="about-hero-content">
+
+    <img src="images/logo.png" alt="Gaurish Shanti Foundation Logo" class="about-big-logo">
+
+    <h1>About Gaurish Shanti Foundation</h1>
+    <p>Where compassion becomes action, and responsibility becomes change.</p>
+
+  </div>
+</section>
+
+
+<!-- OUR STORY -->
+<section class="about-section">
+  <div class="about-container">
+    <h2>Our Story</h2>
+    <p>
+      Gaurish Shanti Foundation was not built from ambition — it was built from responsibility.
+      It began with a simple yet powerful belief: that real change does not come from words,
+      but from consistent action rooted in compassion.
+    </p>
+    <p>
+      In communities where opportunity feels distant and hope often fades quietly,
+      we chose to stand present. We chose to serve. What started as small acts of support
+      slowly transformed into structured initiatives that now touch lives across education,
+      healthcare, environmental sustainability, and social empowerment.
+    </p>
+  </div>
+</section>
+
+<!-- OUR PURPOSE -->
+<section class="about-section light">
+  <div class="about-container">
+    <h2>Our Purpose</h2>
+    <p>
+      Our purpose is simple yet profound — to empower individuals and strengthen communities.
+      We believe that dignity, knowledge, health, and opportunity are not privileges,
+      but rights every human deserves.
+    </p>
+    <p>
+      Through plantation drives, medical outreach programs, educational support,
+      and women empowerment initiatives, we aim to build a society that stands
+      not on charity, but on shared responsibility.
+    </p>
+  </div>
+</section>
+
+<!-- OUR VALUES -->
+<section class="about-section">
+  <div class="about-container">
+    <h2>Our Values</h2>
+    <p>
+      We operate with integrity.  
+      We lead with compassion.  
+      We act with accountability.  
+    </p>
+    <p>
+      Every initiative we undertake is driven by transparency and commitment.
+      We measure our success not by numbers alone, but by the strength,
+      confidence, and independence we help cultivate within communities.
+    </p>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="about-cta">
+  <div class="about-cta-content">
+    <h2>Be Part of the Change</h2>
+    <p>
+      Change is not created by institutions alone — it is created by people
+      who choose to care. Join us in shaping a future built on compassion,
+      sustainability, and collective progress.
+    </p>
+  </div>
+</section>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

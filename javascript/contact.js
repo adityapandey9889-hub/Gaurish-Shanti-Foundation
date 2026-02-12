@@ -1,12 +1,21 @@
 const form = document.getElementById("contactForm");
-const status = document.getElementById("formStatus");
+const message = document.getElementById("formMessage");
 
-form.addEventListener("submit", e => {
-    e.preventDefault();
+form.addEventListener("submit", function(e){
+  e.preventDefault();
 
-    status.textContent = "Sending your message...";
-    setTimeout(() => {
-        status.textContent = "✅ Thank you! We’ll get back to you soon.";
-        form.reset();
-    }, 1200);
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mobile = document.getElementById("mobile").value.trim();
+
+  if(mobile.length !== 10 || isNaN(mobile)){
+    message.style.color = "red";
+    message.textContent = "Please enter a valid 10-digit mobile number.";
+    return;
+  }
+
+  message.style.color = "green";
+  message.textContent = "Your message has been sent successfully!";
+
+  form.reset();
 });

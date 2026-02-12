@@ -1,90 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Us | Gaurish Shanti Foundation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/contact.css">
+  <meta charset="UTF-8">
+  <title>Contact Us | Gaurish Shanti Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- ================= NAVBAR ================= -->
 
-<section class="contact-hero">
-    <h1>Let’s Talk</h1>
-    <p>Have a question, idea, or want to work with us? We’d love to hear from you.</p>
-</section>
+  <div id="navbar-placeholder"></div>
 
-<section class="contact-main">
+<div class="contact-wrapper">
 
-    <!-- Left: Info -->
+  <!-- LOGO -->
+  <div class="contact-logo">
+    <img src="images/logo.png" alt="Logo">
+    <h2>Gaurish Shanti Foundation</h2>
+  </div>
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE : CONTACT INFO -->
     <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p>
-            Reach out to us for collaborations, volunteering, partnerships,
-            or any queries related to our work.
-        </p>
+      <h3>Get In Touch</h3>
 
-        <div class="info-item">
-            <span>📍</span>
-            <div>
-                <strong>Address</strong>
-                <p>Bangalore, Karnataka, India</p>
-            </div>
-        </div>
+      <p><i class="fas fa-map-marker-alt"></i> Registered Office:A-330, Buddha Marg,
+        Mandawali Extension Delhi – 110092</p>
+      <p><i class="fas fa-map-marker-alt"></i>
+        Administrative Office:
+        Village – VinaNagar (Kareji),
+        Post – Belour,
+        Police Station – Guthani,
+        Block – Siwan,
+        Bihar – 841239
+      </p>
+      <p><i class="fas fa-phone"></i> +91-8757249438</p>
+      <p><i class="fas fa-envelope"></i> info@gaurishshantifoundation.org</p>
 
-        <div class="info-item">
-            <span>📧</span>
-            <div>
-                <strong>Email</strong>
-                <p>info@gaurishshantifoundation.org</p>
-            </div>
-        </div>
-
-        <div class="info-item">
-            <span>📞</span>
-            <div>
-                <strong>Phone</strong>
-                <p>+91 9XXXXXXXXX</p>
-            </div>
-        </div>
-
-        <div class="social-row">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-        </div>
+      <div class="contact-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
     </div>
 
-    <!-- Right: Form -->
+    <!-- RIGHT SIDE : FORM -->
     <div class="contact-form">
-        <form id="contactForm">
-            <div class="form-group">
-                <input type="text" required>
-                <label>Your Name</label>
-            </div>
+      <form id="contactForm">
 
-            <div class="form-group">
-                <input type="email" required>
-                <label>Email Address</label>
-            </div>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        <input type="text" id="subject" placeholder="Subject" required>
 
-            <div class="form-group">
-                <input type="text" required>
-                <label>Subject</label>
-            </div>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
 
-            <div class="form-group">
-                <textarea rows="4" required></textarea>
-                <label>Your Message</label>
-            </div>
+        <button type="submit">Send Message</button>
 
-            <button type="submit">Send Message</button>
-            <p class="form-status" id="formStatus"></p>
-        </form>
+        <p id="formMessage"></p>
+
+      </form>
     </div>
 
-</section>
+  </div>
+
+</div>
 
 <script src="javascript/contact.js"></script>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>

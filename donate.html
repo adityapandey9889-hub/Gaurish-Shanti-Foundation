@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate | Gaurish Shanti Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/donate.css">
+</head>
+<body>
+
+<div class="donate-wrapper">
+
+  <!-- LEFT SIDE -->
+  <div class="donate-left">
+    <img src="images/logo.png" class="donate-logo">
+    <h1>Support Our Mission</h1>
+    <p>
+      Your contribution empowers education, healthcare, and environmental
+      sustainability initiatives across communities.
+    </p>
+
+    <div class="secure-box">
+      🔒 100% Secure Donation  
+      <span>All transactions are encrypted and safe.</span>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="donate-right">
+
+    <h2>Make a Donation</h2>
+
+    <!-- AMOUNT SECTION -->
+    <div class="amount-section">
+      <label>Select Amount (₹)</label>
+
+      <div class="preset-amounts">
+        <button class="amount-btn">500</button>
+        <button class="amount-btn">1000</button>
+        <button class="amount-btn">2500</button>
+        <button class="amount-btn">5000</button>
+      </div>
+
+      <input type="number" id="customAmount" placeholder="Enter Custom Amount">
+    </div>
+
+    <!-- FORM -->
+    <form id="donationForm">
+
+      <div class="form-grid">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Mobile Number" required>
+        <input type="text" placeholder="City / State">
+      </div>
+
+      <select required>
+        <option value="">Select Donation Purpose</option>
+        <option>Education Support</option>
+        <option>Healthcare Initiatives</option>
+        <option>Plantation Drives</option>
+        <option>Women Empowerment</option>
+        <option>General Fund</option>
+      </select>
+
+      <textarea rows="4" placeholder="Remarks (Optional)"></textarea>
+
+      <button type="submit" class="donate-submit">
+        Proceed to Payment
+      </button>
+
+      <p id="donateMessage"></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="javascript/donate.js"></script>
+<script>
+    const amountButtons = document.querySelectorAll('.amount-btn');
+const customAmount = document.getElementById('customAmount');
+const form = document.getElementById('donationForm');
+const message = document.getElementById('donateMessage');
+
+let selectedAmount = 0;
+
+amountButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    amountButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedAmount = btn.textContent;
+    customAmount.value = '';
+  });
+});
+
+customAmount.addEventListener('input', () => {
+  amountButtons.forEach(b => b.classList.remove('active'));
+  selectedAmount = customAmount.value;
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  if (!selectedAmount || selectedAmount <= 0) {
+    message.style.color = "red";
+    message.textContent = "Please select or enter a valid donation amount.";
+    return;
+  }
+
+  message.style.color = "green";
+  message.textContent = `Proceeding with ₹${selectedAmount} donation...`;
+
+  // Here backend/payment gateway integration will go
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#f5f3f1,#eae7e3);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.donate-wrapper{
+  width:95%;
+  max-width:1200px;
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  box-shadow:0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* LEFT SIDE */
+.donate-left{
+  background:linear-gradient(135deg,#15803d,#0f5c2c);
+  color:#fff;
+  padding:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.donate-logo{
+  width:90px;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+
+.donate-left h1{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.secure-box{
+  margin-top:40px;
+  background:rgba(255,255,255,0.15);
+  padding:15px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.secure-box span{
+  display:block;
+  font-size:12px;
+  margin-top:5px;
+}
+
+/* RIGHT SIDE */
+.donate-right{
+  padding:60px;
+}
+
+.donate-right h2{
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+/* AMOUNT SECTION */
+.amount-section{
+  margin-bottom:30px;
+}
+
+.amount-section label{
+  font-weight:600;
+  display:block;
+  margin-bottom:10px;
+}
+
+.preset-amounts{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.amount-btn{
+  padding:10px 20px;
+  border:1px solid #15803d;
+  background:#fff;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.amount-btn.active,
+.amount-btn:hover{
+  background:#15803d;
+  color:#fff;
+}
+
+#customAmount{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* FORM */
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  margin-bottom:15px;
+  outline:none;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+  border-color:#15803d;
+}
+
+.donate-submit{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#15803d;
+  color:#fff;
+  font-weight:600;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.donate-submit:hover{
+  background:#0f5c2c;
+}
+
+#donateMessage{
+  margin-top:10px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .donate-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+}
