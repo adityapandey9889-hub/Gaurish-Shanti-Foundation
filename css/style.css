@@ -599,3 +599,60 @@ body {
   }
 
 }
+/* ===== PROFILE SECTION ===== */
+
+.auth-area {
+  position: relative;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  background: #1c7c3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.dropdown a,
+.dropdown button {
+  padding: 10px 15px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: #f2f2f2;
+}
+
+.hidden {
+  display: none;
+}

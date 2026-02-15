@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile | Gaurish Shanti Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<div class="profile-container">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="profile-sidebar">
+    <div class="profile-avatar">
+      <div class="avatar-circle">
+        <span id="avatarInitial">A</span>
+      </div>
+      <h3 id="profileName">Loading...</h3>
+      <p id="memberSince">Member since -</p>
+    </div>
+
+    <div class="profile-menu">
+      <button class="active">Profile Info</button>
+      <button onclick="location.href='donations.html'">Your Donations</button>
+      <button onclick="location.href='participations.html'">Your Participations</button>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="profile-content">
+
+    <h2>Profile Information</h2>
+
+    <form id="profileForm">
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="profileNameInput" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="profileEmail" disabled>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="text" id="profilePhone">
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" id="profileAddress">
+      </div>
+
+      <button type="submit" class="save-btn">Update Profile</button>
+
+    </form>
+
+    <!-- SECURITY SECTION -->
+    <div class="security-card">
+
+  <h3>Security Settings</h3>
+
+  <div class="security-status">
+    <span id="emailStatus" class="status-badge">Email Not Verified</span>
+  </div>
+
+  <div class="security-actions">
+    <button id="verifyEmailBtn" class="btn secondary-btn">
+      Verify Email
+    </button>
+
+    <button id="changePasswordBtn" class="btn secondary-btn">
+      Change Password
+    </button>
+  </div>
+
+  <div class="danger-zone">
+    <button id="deleteAccountBtn" class="btn danger-btn">
+      Delete Account
+    </button>
+  </div>
+
+</div>
+
+
+  </div>
+
+</div>
+
+<script type="module" src="javascript/profile.js"></script>
+<script src="javascript/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+.profile-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.profile-sidebar {
+  width: 300px;
+  background: linear-gradient(135deg, #1e7d3b, #25a052);
+  color: #fff;
+  padding: 30px;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  color: #1e7d3b;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.profile-menu button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  cursor: pointer;
+}
+
+.profile-menu button.active,
+.profile-menu button:hover {
+  background: white;
+  color: #1e7d3b;
+}
+
+.logout-btn {
+  background: #c0392b !important;
+}
+
+/* Content */
+.profile-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.save-btn {
+  padding: 12px 20px;
+  background: #1e7d3b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.security-section {
+  margin-top: 40px;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+/* ================= SECURITY CARD ================= */
+
+.security-card {
+  margin-top: 40px;
+  padding: 25px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.security-card h3 {
+  margin-bottom: 15px;
+}
+
+.security-status {
+  margin-bottom: 20px;
+}
+
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-badge.verified {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.security-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.secondary-btn {
+  background-color: #e5e7eb;
+}
+
+.secondary-btn:hover {
+  background-color: #d1d5db;
+}
+
+.danger-zone {
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.danger-zone h4 {
+  margin-bottom: 10px;
+  color: #b91c1c;
+}
+
+.danger-btn {
+  background-color: #dc2626;
+  color: white;
+}
+
+.danger-btn:hover {
+  background-color: #b91c1c;
+}

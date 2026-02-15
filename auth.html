@@ -31,31 +31,55 @@
     </div>
 
     <!-- LOGIN FORM -->
-    <form id="loginForm" class="auth-form">
-      <h3>Welcome Back</h3>
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit" class="primary-btn">Login</button>
-    </form>
+<form id="loginForm" class="auth-form">
+  <h3>Welcome Back</h3>
+
+  <input 
+    type="email" 
+    id="loginEmail" 
+    name="loginEmail"
+    placeholder="Email Address" 
+    required
+  >
+
+  <input 
+    type="password" 
+    id="loginPassword" 
+    name="loginPassword"
+    placeholder="Password" 
+    required
+  >
+
+  <button type="submit" class="primary-btn">
+    Login
+  </button>
+</form>
+
+
 
     <!-- SIGNUP FORM -->
     <form id="signupForm" class="auth-form hidden">
-      <h3>Create Account</h3>
-      <input type="text" placeholder="Full Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="tel" placeholder="Mobile Number" required>
-      <input type="password" placeholder="Password" required>
-      <input type="password" placeholder="Confirm Password" required>
-      <button type="submit" class="primary-btn">Sign Up</button>
-    </form>
+  <h3>Create Account</h3>
+  <input type="text" id="signupName" placeholder="Full Name" required>
+<input type="text" id="signupAddress" placeholder="Address" required>
+<input type="email" id="signupEmail" placeholder="Email Address" required>
+<input type="tel" id="signupPhone" placeholder="Mobile Number" required>
+<input type="password" id="signupPassword" placeholder="Password" required>
+<input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+
+  <button type="submit" class="primary-btn">Sign Up</button>
+</form>
+
 
   </div>
 
 </div>
 
-<script src="javascript/auth.js"></script>
 <script src="javascript/script.js"></script>
+<script type="module" src="javascript/auth.js"></script>
+<script type="module" src="javascript/authState.js"></script>
+
+
 
 
 </body>
