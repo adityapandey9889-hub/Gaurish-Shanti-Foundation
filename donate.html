@@ -2,86 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Donate | Gaurish Shanti Foundation</title>
+  <title>Donations Coming Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/donate.css">
 </head>
 <body>
 
-<div class="donate-wrapper">
+  <div class="container">
+    <div class="card">
+      <h1>Donations Opening Soon 🙏</h1>
+      
+      <p class="message">
+        We are currently setting up our secure online donation system.
+        This feature will be available very soon.
+      </p>
 
-  <!-- LEFT SIDE -->
-  <div class="donate-left">
-    <img src="images/logo.png" class="donate-logo">
-    <h1>Support Our Mission</h1>
-    <p>
-      Your contribution empowers education, healthcare, and environmental
-      sustainability initiatives across communities.
-    </p>
+      <p class="sub-message">
+        Your support means everything to us.  
+        Please stay connected and visit again shortly.
+      </p>
 
-    <div class="secure-box">
-      🔒 100% Secure Donation  
-      <span>All transactions are encrypted and safe.</span>
+      <div class="divider"></div>
+
+      <p class="contact">
+        For urgent contributions or queries,  
+        please contact us directly.
+      </p>
+
+      <a href="contact.html" class="btn">Contact Us</a>
+
     </div>
   </div>
-
-  <!-- RIGHT SIDE -->
-  <div class="donate-right">
-
-    <h2>Make a Donation</h2>
-
-    <!-- AMOUNT SECTION -->
-    <div class="amount-section">
-      <label>Select Amount (₹)</label>
-
-      <div class="preset-amounts">
-        <button class="amount-btn">500</button>
-        <button class="amount-btn">1000</button>
-        <button class="amount-btn">2500</button>
-        <button class="amount-btn">5000</button>
-      </div>
-
-      <input type="number" id="customAmount" placeholder="Enter Custom Amount">
-    </div>
-
-    <!-- FORM -->
-    <form id="donationForm">
-
-      <div class="form-grid">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Mobile Number" required>
-        <input type="text" placeholder="City / State">
-      </div>
-
-      <select required>
-        <option value="">Select Donation Purpose</option>
-        <option>Education Support</option>
-        <option>Healthcare Initiatives</option>
-        <option>Plantation Drives</option>
-        <option>Women Empowerment</option>
-        <option>General Fund</option>
-      </select>
-
-      <textarea rows="4" placeholder="Remarks (Optional)"></textarea>
-
-      <button type="submit" class="donate-submit">
-        Proceed to Payment
-      </button>
-
-      <p id="donateMessage"></p>
-
-    </form>
-
-  </div>
-
-</div>
-
-<script src="javascript/donate.js"></script>
-<script src="javascript/script.js"></script>
-<script type="module" src="javascript/authState.js"></script>
 
 </body>
 </html>
